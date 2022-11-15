@@ -13,3 +13,5 @@ def get_info_from_document(doc):
 def write_text_to_document(doc):
     print(doc)
 
+
+
