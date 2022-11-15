@@ -23,12 +23,12 @@ def print_maintext():
 
 # MainFunc
 def main():
+    print_maintext()
+    print("\n" * 4)
     print(area_triangle_with_geron_formula(4, 2, 3))
 
 
 # Entry point
 if __name__ == "__main__":
-    print_maintext()
-    print("\n" * 4)
     main()
     sys.exit(0)
