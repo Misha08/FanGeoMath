@@ -9,7 +9,11 @@ Works on Python versions 3.0 and above
 
 
 import sys
-from triangles import area_triangle_with_geron_formula
+from triangles import *
+from switches import open_text_document, get_info_from_document, write_text_to_document
+
+# Parameters
+doc_name = "Switches.txt"
 
 
 # displays welcome text
@@ -23,7 +27,13 @@ def print_maintext():
 
 # MainFunc
 def main():
-    print_maintext()
+    if get_info_from_document(open_text_document(doc_name))[1] == "true":
+        print_maintext()
+        write_text_to_document(open_text_document(doc_name))
+    else:
+        print("Good bye")
+
+
     print("\n" * 4)
     print(area_triangle_with_geron_formula(4, 2, 3))
 
