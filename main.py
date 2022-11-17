@@ -15,8 +15,8 @@ from switches import open_text_document, get_info_from_document, write_text_to_d
 # Parameters
 doc_name = "Switches.txt"
 
-
-# displays welcome text
+# Help functions
+# Displays welcome text
 def print_maintext():
     print("/*------------------------------------------------------------*/")
     print("                          Hello User!!")
@@ -25,20 +25,51 @@ def print_maintext():
     print("/*------------------------------------------------------------*/")
 
 
+# Analogues of the expression "switch - case"
+def switch_1(value):
+    if value == 1:
+        return 1
+    elif value == 2:
+        return 2
+    elif value == 3:
+        return 3
+    elif value == 4:
+        return 4
+    else:
+        return 0
+
+
+def switch_2(value):
+    if value == 1:
+        return 1
+    elif value == 2:
+        return 2
+    elif value == 3:
+        return 3
+    elif value == 4:
+        return 4
+
+
 # MainFunc
 def main():
     if get_info_from_document(open_text_document(doc_name))[1] == "true":
         print_maintext()
-        write_text_to_document(open_text_document(doc_name))
-    else:
-        print("Good bye")
+        print("\n" * 4)
+        write_text_to_document(doc_name)
 
+    print("1 - area")
+    print("2 - height")
+    print("3 - medians")
+    print("4 - bisectors")
 
-    print("\n" * 4)
-    print(area_triangle_with_geron_formula(4, 2, 3))
+    choose = int(input("what will you choose?: "))
+    switch_1(choose)
 
 
 # Entry point
 if __name__ == "__main__":
     main()
     sys.exit(0)
+
+
+
