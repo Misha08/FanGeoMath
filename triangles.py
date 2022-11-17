@@ -1,4 +1,4 @@
-from math import sqrt, sin, degrees, pi, asin
+from math import sqrt, sin, degrees, asin, cos
 
 
 # Help Functions
@@ -11,6 +11,11 @@ def get_semi_perimeter(side1=0, side2=0, side3=0):
 def get_sinus(angle):
     sinus = sin(degrees(angle))
     return sinus
+
+
+def get_cosinus(angle):
+    cosinus = cos(degrees(angle))
+    return cosinus
 
 
 # Formulas about Triangles
@@ -72,8 +77,15 @@ def median_in_terms_of_sides(side1=0, side2=0, side3=0):
     return m
 
 
+# Bisectors
 def bisector_of_a_triangle_in_terms_of_sides(side1=0, side2=0, side3=0):
     p = get_semi_perimeter(side1, side2, side3)
     m = 2 * sqrt(side2 * side3 * p * (p - side1)) / (side2 + side3)
     return m
+
+
+def bisector_of_a_triangle_in_terms_of_sides_and_angle(side2=0, side3=0, angle=0):
+    l_of_side1 = 2 * side2 * side3 * get_cosinus(angle / 2) / side2 + side3
+    return l_of_side1
+
 
