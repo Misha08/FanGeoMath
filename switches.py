@@ -10,8 +10,10 @@ def get_info_from_document(doc):
     return info
 
 
-def write_text_to_document(doc):
-    print(doc)
+def write_text_to_document(doc_name):
+    with open(doc_name, "r+", encoding="UTF-8") as rw_file:
+        doc = rw_file.read()
+        rw_file.write(doc.split(":")[0] + "False")
 
 
 
