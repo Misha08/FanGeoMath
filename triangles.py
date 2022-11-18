@@ -26,21 +26,21 @@ def check_exist_of_triangle(side1=0, side2=0, side3=0):
 
 
 # Formulas about Areas
-def area_triangle_with_geron_formula(a, b, c):
-    check_exist_of_triangle(a, b, c)
-    p = (a + b + c) / 2
-    s = sqrt(p * (p - a) * (p - b) * (p - c))
+def area_triangle_with_geron_formula(side1=0, side2=0, side3=0):
+    check_exist_of_triangle(side1, side2, side3)
+    p = (side1 + side2 + side3) / 2
+    s = sqrt(p * (p - side1) * (p - side2) * (p - side3))
     return s
 
 
-def area_triangle_with_usual_formula(a, h):
-    s = a * h * 0.5
+def area_triangle_with_usual_formula(side=0, h=0):
+    s = side * h * 0.5
     return s
 
 
 # Formulas about Heights, Meridians, Bisectors
 # Heights
-def height_in_terms_of_area(s, side):
+def height_in_terms_of_area_and_side(s, side):
     h = s * 2 / side
     return h
 
