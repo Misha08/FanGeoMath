@@ -9,7 +9,7 @@ Works on Python versions 3.0 and above
 
 
 import sys
-from switches import open_text_document, get_info_from_document, write_text_to_document
+from switches import open_text_document, get_info_from_document, write_text_to_document, switch_1
 
 # Parameters
 doc_name = "Switches.txt"
