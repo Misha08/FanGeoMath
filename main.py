@@ -1,10 +1,10 @@
 # -*- coding: UTF-8 -*-
 
 '''
-
 The program is implemented without the use of OOP and is still under development!
 Works on Python versions 3.0 and above
 
+Python version 3.8
 '''
 
 
@@ -14,6 +14,7 @@ from switches import open_text_document, get_info_from_document, write_text_to_d
 # Parameters
 doc_name = "Switches.txt"
 
+
 # Help functions
 # Displays welcome text
 def print_maintext():
@@ -22,6 +23,8 @@ def print_maintext():
     print("In this program, you can play with the areas of different shapes")
     print("                 and even draw in the console!")
     print("/*------------------------------------------------------------*/")
+    print("!!!     All quantities are maintained in the SI system      !!!")
+
 
 # MainFunc
 def main():
@@ -43,6 +46,3 @@ def main():
 if __name__ == "__main__":
     main()
     sys.exit(0)
-
-
-
