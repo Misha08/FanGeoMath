@@ -108,7 +108,6 @@ _An analogue of the function "Switch - value" is present in python, starting fro
 ⚠️⚠️⚠️
 
 ## **Sources**:
-<br />
 
 ## Link to Documentation
 Tap here -> [Python Documentations V 3.10](https://docs.python.org/3/whatsnew/3.10.html)
